@@ -1,113 +1,203 @@
-import Image from 'next/image'
+import Image from "next/image";
+import banner from "../assets/images/banner.png";
+import w1 from "../assets/images/w1.png";
+import w2 from "../assets/images/w2.png";
+import w3 from "../assets/images/w3.png";
+import w4 from "../assets/images/w4.png";
+import w5 from "../assets/images/w5.png";
+import { Montserrat } from "next/font/google";
+import { FaFaceGrinBeam } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen bg-zinc-950 flex-col montserrat text-white items-center">
+      <div className="relative max-w-5xl md:mt-8 md:rounded-lg overflow-hidden">
+        <Image src={banner} alt="" className="h-full w-full object-cover" />
+        <div className="absolute w-full md:hidden h-1/3 bg-gradient-to-b from-transparent to-zinc-950 bottom-0 left-0"></div>
+      </div>
+      <div className="flex px-8 flex-col pb-8 max-w-4xl w-full mt-8">
+        <div className="flex flex-col">
+          <div className="flex gap-4 items-center font-bold text-2xl ">
+            <FaFaceGrinBeam />
+            <h1>BEM VINDO</h1>
+          </div>
+          <div className="mt-3">
+            <p className="font-light text-sm leading-tight">
+              Aqui, mergulhamos nas <b className="font-bold">histórias inspiradoras</b> de
+              mulheres que, apesar de muitas vezes esquecidas, deixaram uma marca
+              indelével no mundo da
+              <b className="font-bold"> ciência</b>. Enquanto figuras masculinas costumam
+              dominar as narrativas históricas, este espaço destaca a notável{" "}
+              <b className="font-bold">contribuição feminina</b> que moldou e continua a
+              moldar o panorama científico.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col mt-16">
+          <div className="flex gap-4 uppercase items-center font-bold text-xl ">
+            <div className="h-6 w-1 bg-indigo-800 rounded-full"></div>
+            <h1>Conheça as cientistas</h1>
+          </div>
+          <div className="mt-2">
+            <p className="font-light text-sm leading-tight">
+              Essa seção é dedicada a destacar algumas das{" "}
+              <b className="font-bold">mulheres notáveis</b> na ciência, revelando suas
+              contribuições incríveis e histórias inspiradoras.
+            </p>
+          </div>
+        </div>
+        <div className="mt-8 flex gap-4">
+          <Image
+            src={w1}
+            alt=""
+            className="rounded-lg max-w-[10rem] w-1/4 h-max object-cover"
+          />
+          <div className="">
+            <div className="flex leading-tight gap-4 uppercase items-center font-semibold text-lg ">
+              <h1>Katherine Johnson</h1>
+            </div>
+            <div className="max-w-[28rem]">
+              <p className="font-light text-xs leading-tight">
+                Katherine Johnson, uma matemática, física e cientista norte-americana,
+                nasceu em White Sulphur Springs, Virgínia Ocidental, EUA. Sua notável
+                contribuição para a aeronáutica e explorações espaciais dos Estados Unidos
+                inclui um papel crucial na área de computação da NASA. Katherine faleceu
+                aos 101 anos em 24 de fevereiro de 2020.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-8">
+          <h1 className="uppercase montserrat text-xl font-semibold">
+            Legado e realizações
+          </h1>
+          <div className="border items-center max-w-lg border-white border-opacity-60 bg-white bg-opacity-5 rounded-lg flex py-3 px-4 gap-4 mt-4">
+            <div className="w-3 h-3 rounded-full flex-shrink-0 bg-indigo-800"></div>
+            <p className="font-light leading-tight text-xs uppercase">
+              Participação vital na corrida espacial, calculando trajetórias para a missão
+              Apollo 11.
+            </p>
+          </div>
+          <div className="border items-center max-w-lg border-white border-opacity-60 bg-white bg-opacity-5 rounded-lg flex py-3 px-4 gap-4 mt-4">
+            <div className="w-3 h-3 rounded-full flex-shrink-0 bg-indigo-800"></div>
+            <p className="font-light leading-tight text-xs uppercase">
+              Recebeu a Medalha Presidencial da Liberdade em 2015, em reconhecimento por
+              suas contribuições pioneiras.
+            </p>
+          </div>
+        </div>
+        <div className="mt-12 flex gap-4">
+          <Image
+            src={w2}
+            alt=""
+            className="rounded-lg max-w-[10rem] w-1/4 h-max object-cover"
+          />
+          <div className="">
+            <div className="flex leading-tight gap-4 uppercase items-center font-semibold text-lg ">
+              <h1>Marie Curie</h1>
+            </div>
+            <div className="max-w-[28rem]">
+              <p className="font-light text-xs leading-tight">
+                Marie Curie, nascida em 1867, foi a primeira mulher a ganhar dois Prêmios
+                Nobel (Física e Química). Sua descoberta dos elementos polônio e rádio
+                revolucionou o entendimento da radioatividade. Apesar dos desafios como
+                mulher na ciência, sua determinação e colaboração com Pierre Curie
+                destacaram-se. Seu legado inspira, mostrando a importância das mulheres na
+                ciência.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-8">
+          <h1 className="uppercase montserrat text-xl font-semibold">
+            Legado e realizações
+          </h1>
+          <div className="border items-center max-w-lg border-white border-opacity-60 bg-white bg-opacity-5 rounded-lg flex py-3 px-4 gap-4 mt-4">
+            <div className="w-3 h-3 rounded-full flex-shrink-0 bg-indigo-800"></div>
+            <p className="font-light leading-tight text-xs uppercase">
+              Descoberta dos elementos polônio e rádio.
+            </p>
+          </div>
+          <div className="border items-center max-w-lg border-white border-opacity-60 bg-white bg-opacity-5 rounded-lg flex py-3 px-4 gap-4 mt-4">
+            <div className="w-3 h-3 rounded-full flex-shrink-0 bg-indigo-800"></div>
+            <p className="font-light leading-tight text-xs uppercase">
+              Desenvolvimento da teoria da radioatividade.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col mt-16">
+          <div className="flex gap-4 uppercase items-center font-bold text-xl ">
+            <div className="h-6 w-1 bg-indigo-800 rounded-full"></div>
+            <h1>Outras cientistas</h1>
+          </div>
+          <div className="mt-2">
+            <p className="font-light text-sm leading-tight">
+              Destacamos também outras{" "}
+              <b className="font-bold">cientistas extraordinárias</b> que contribuíram
+              significativamente para diversas áreas científicas:
+            </p>
+          </div>
+          <div className="mt-2">
+            <div className="flex items-center gap-4 mt-4">
+              <Image src={w4} alt="" className="w-1/4 rounded-full h-max max-w-[7rem]" />
+              <div className="flex flex-col">
+                <div className="flex gap-4 md:text-xl uppercase items-center font-semibold text-lg ">
+                  <h1>Sônia Guimarães</h1>
+                </div>
+                <div className="max-w-[28rem]">
+                  <p className="font-light text-xs md:text-base md:leading-tight leading-tight">
+                    Cientista brasileira notável, Sônia Guimarães desafiou barreiras e
+                    inspirou gerações. Sua trajetória única na ciência e defesa pela
+                    inclusão a tornam uma figura inspiradora no cenário científico.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 mt-6">
+              <Image src={w3} alt="" className="w-1/4 rounded-full h-max max-w-[7rem]" />
+              <div className="flex flex-col">
+                <div className="flex md:text-xl gap-4 uppercase items-center font-semibold text-lg ">
+                  <h1>Anita Canavarro</h1>
+                </div>
+                <div className="max-w-[28rem]">
+                  <p className="font-light text-xs  md:text-base md:leading-tight leading-tight">
+                    É mestra e doutora em Ciências, licenciada e bacharel em Química pela
+                    Universidade Federal do Rio de Janeiro. Sua área de atuação é a
+                    química bioinorgânica medicinal.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 mt-6">
+              <Image src={w5} alt="" className="w-1/4 rounded-full h-max max-w-[7rem]" />
+              <div className="flex flex-col">
+                <div className="flex md:text-xl gap-4 uppercase items-center font-semibold text-lg ">
+                  <h1>Jane Goodall</h1>
+                </div>
+                <div className="max-w-[28rem]">
+                  <p className="font-light text-xs md:text-base md:leading-tight leading-tight">
+                    Primatóloga britânica conhecida por seu trabalho pioneiro com
+                    chimpanzés na Tanzânia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col mt-16">
+          <div className="flex gap-4 uppercase items-center font-bold text-xl ">
+            <div className="h-6 w-1 bg-indigo-800 rounded-full"></div>
+            <h1>Inspiração para o futuro</h1>
+          </div>
+          <div className="mt-2">
+            <p className="font-light text-sm leading-tight">
+              Estas mulheres são apenas algumas das muitas cientistas talentosas cujas
+              contribuições moldaram o mundo. Encorajamos você a explorar mais, aprender
+              sobre outras cientistas e inspirar-se em suas jornadas notáveis.
+            </p>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }
